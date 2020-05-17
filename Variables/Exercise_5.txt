@@ -1,0 +1,19 @@
+Scenario 1: 
+  x = 0
+  3.times do
+    x += 1
+  end
+  puts x
+
+Scenario 2:
+  y = 0
+  3.times do
+    y += 1
+    x = y
+  end
+  puts x
+
+In Scenario 1, x prints 3 to the screen.
+In Scenario 2, running the code would give an error because x is only
+defined inside the do/end block. The outer scope therefore has no 
+access to the value of x.
